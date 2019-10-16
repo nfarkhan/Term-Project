@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact</title>
+    <style type="text/css">
+        body {
+            background-color: whitesmoke;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 10px;
+            padding: 10px;
+            overflow: hidden;
+            background-color: green;
+            display: inline-block;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: Helvetica;
+            font-weight: bold;
+        }
+
+        li a:hover {
+            background-color: red;
+        }
+
+        header {
+            text-align: center;
+            background-color: green;
+            line-height: 5px;
+        }
+
+        div {
+            margin: 3px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        div#style1 {
+            font-family: Helvetica;
+            color: darkgreen;
+        }
+
+        table {
+            border: 1px solid green;
+            margin-right: auto;
+            margin-left: auto;
+            width: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li>
+                <a href="index.htm">HOME</a>
+                <a href="History.htm">HISTORY</a>
+                <a href="Geography.htm">GEOGRAPHY</a>
+                <a href="Culture.htm">CULTURE</a>
+                <a href="Food.htm">FOOD</a>
+                <a href="Music.htm">MUSIC</a>
+                <a href="Site-Map.htm">SITE MAP</a>
+                <a href="Contact.htm">CONTACT</a>
+            </li>
+        </ul>
+    </header>
+    <div id="style1">
+        <h2>
+            Thanks for visting All About Iran!
+        </h2>
+        <h3>
+            Please comment any feedback you may have below.
+        </h3>
+        <table>
+            <form action="mailto:nfarkhan2@babson.edu" method="POST">
+                <tr>
+                    <td>
+                        First Name:
+                        <input type="text" name="fname" maxlength="100" size="25"
+                            placeholder="Please enter your first name">
+                    </td>
+                    <td>
+                        Last Name:
+                        <input type="text" name="lname" maxlength="100" size="25"
+                            placeholder="Please enter your last name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h5>
+                            What would you like more more information on?
+                        </h5>
+                        <input type="checkbox" name="topic" value="history"> History <br>
+                        <input type="checkbox" name="topic" value="geography"> Geography <br>
+                        <input type="checkbox" name="topic" value="culture"> Culture <br>
+                        <input type="checkbox" name="topix" value="food"> Food<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h5>
+                            Please comment any other feedback you may have.
+                        </h5>
+                        <textarea name="comments" rows="6" cols="40"></textarea><br>
+
+                        <button type="submit" name="done" value="done">Done</button>
+                        <button type="reset" name="reset" value="reset">Reset</button>
+                    </td>
+                </tr>
+            </form>
+        </table>
+    </div>
+</body>
+
+</html>
