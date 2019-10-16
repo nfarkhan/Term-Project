@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Geography</title>
+    <style type="text/css">
+        body {
+            background-color: whitesmoke;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 10px;
+            padding: 10px;
+            overflow: hidden;
+            background-color: green;
+            display: inline-block;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: Helvetica;
+            font-weight: bold;
+        }
+
+        li a:hover {
+            background-color: red;
+        }
+
+        header {
+            text-align: center;
+            background-color: green;
+            line-height: 5px;
+        }
+
+        h2 {
+            color: darkgreen;
+        }
+
+        p.left {
+            float: left;
+            padding-left: 50px;
+            padding-right: 20px;;
+        }
+
+        p.right {
+            float: right;
+            padding-right: 50px;
+            padding-left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li>
+                <a href="index.htm">HOME</a>
+                <a href="History.htm">HISTORY</a>
+                <a href="Geography.htm">GEOGRAPHY</a>
+                <a href="Culture.htm">CULTURE</a>
+                <a href="Food.htm">FOOD</a>
+                <a href="Music.htm">MUSIC</a>
+                <a href="Site-Map.htm">SITE MAP</a>
+                <a href="Contact.htm">CONTACT</a>
+            </li>
+        </ul>
+    </header>
+    <div>
+        <p class="left">
+            <map name="iran">
+                <area shape="rect" coords="306, 210, 402. 259" href="https://en.wikipedia.org/wiki/Tehran" alt="Tehran"
+                    title="Tehran">
+                <area shape="rect" coords="290, 385, 425, 306" href="https://en.wikipedia.org/wiki/Isfahan"
+                    alt="Esfahan" title="Esfahan">
+            </map>
+            <img src="iranmap.png" usemap="#iran" alt="Map of Iran" title="Map of Iran">
+        </p>
+        <p class="right">
+            <h2>
+                Here's an indepth video explaing Iran's geography.
+            </h2>
+            <iframe width="700" height="400" src="https://www.youtube.com/embed/2xQM4Zy5zIk" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </p>
+    </div>
+</body>
+
+</html>
