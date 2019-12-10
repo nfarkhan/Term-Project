@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>All About Iran  by Niiki</title>
+    <meta name="description" content="Home Page">
+    <meta name="keywords" content="Home Page, Persian Map, Map of Iran, Iranian Flag, Iranian Anthem, Song, Picture, Page Summery, Website Summary">
+    <meta name="author" content="Niiki Farkhan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All About Iran by Niiki</title>
     <style type="text/css">
         body {
             background-color: whitesmoke;
         }
-
+        
         ul {
             list-style-type: none;
             margin: 10px;
@@ -18,13 +22,12 @@
             overflow: hidden;
             background-color: green;
             display: inline-block;
-
         }
-
+        
         li {
             float: left;
         }
-
+        
         li a {
             color: white;
             text-align: center;
@@ -33,48 +36,70 @@
             font-family: Helvetica;
             font-weight: bold;
         }
-
+        
         li a:hover {
             background-color: red;
         }
-
+        
         header {
             text-align: center;
             background-color: green;
             line-height: 5px;
         }
-
+        
         div#hello {
             color: darkgreen;
             text-align: center;
-
         }
-
+        
         div#audio {
             color: darkgreen;
             text-align: center;
         }
-
+        
         h1#border1 {
             border-bottom: 2px solid darkgreen;
         }
-
+        
         table {
             border: 1px solid green;
             margin-right: auto;
             margin-left: auto;
             width: 70%;
         }
-
+        
         td {
             border: 1px solid green;
             font-size: 20px;
         }
-
+        
         tr#topic {
             font-weight: bold;
         }
+        
+        img#map {
+            height: 500px;
+        }
+        
+        h3 {
+            text-align: center;
+        }
     </style>
+    <script type="text/javascript">
+        function shrink() {
+            let i = document.getElementById("map").width;
+            console.log(i)
+            i = i / 1.25;
+            document.getElementById("map").width = i;
+        }
+
+        function enlarge() {
+            let i = document.getElementById("map").width;
+            console.log(i)
+            i = i * 1.25;
+            document.getElementById("map").width = i;
+        }
+    </script>
 </head>
 
 <body>
@@ -90,6 +115,7 @@
                     <a href="Music.htm">MUSIC</a>
                     <a href="Site-Map.htm">SITE MAP</a>
                     <a href="Contact.htm">CONTACT</a>
+                    <a href="Credits.htm">CREDITS</a>
                 </li>
             </ul>
         </header>
@@ -103,8 +129,7 @@
             About Iran is a website dedicated to the history, geoography, culture, food, and music of Iran.
         </h3>
         <h4>
-            There will be no talk about
-            past or present political topics. This is a safe space and will only focus on the beauty of this country.
+            There will be no talk about past or present political topics. This is a safe space and will only focus on the beauty of this country.
         </h4>
         <br>
         <div id="audio">
@@ -139,23 +164,29 @@
                 </tr>
                 <tr>
                     <td>
-                        This will be about the history of Iran before 1978. As written above, this is not a website that will
-                        discuss politics.
+                        This will be about the history of Iran before 1978. As written above, this is not a website that will discuss politics.
                     </td>
                     <td>
                         This will be about the general geography of Iran. Climate, regions, etc.
                     </td>
                     <td>
-                        This will be about the culture of Iran -- from holdays to traditions.
+                        This will be about the culture of Iran -- from holidays to traditions.
                     </td>
                     <td>
                         This will be about the food of Iran.
                     </td>
                     <td>
-                        This will be about the music of Iran through generations. 
+                        This will be about the music of Iran through generations.
                     </td>
                 </tr>
             </table>
+        </div>
+        <br>
+        <div onmouseover="enlarge()" onmouseout="shrink()">
+            <img src="iran_map.jpg" alt="iranmap" title="iranmap" id="map">
+            <h3>
+                Hover over me!
+            </h3>
         </div>
 </body>
 

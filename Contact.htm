@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Contact">
+    <meta name="keywords" content="Feedback, Topics, Comments">
+    <meta name="author" content="Niiki Farkhan">
+    <script src="http://code.jquery.com/jquery.min.js" type="text/javascript"></script>
     <title>Contact</title>
     <style type="text/css">
         body {
             background-color: whitesmoke;
         }
-
+        
         ul {
             list-style-type: none;
             margin: 10px;
@@ -19,11 +23,11 @@
             background-color: green;
             display: inline-block;
         }
-
+        
         li {
             float: left;
         }
-
+        
         li a {
             color: white;
             text-align: center;
@@ -32,41 +36,94 @@
             font-family: Helvetica;
             font-weight: bold;
         }
-
+        
         li a:hover {
             background-color: red;
         }
-
+        
         header {
             text-align: center;
             background-color: green;
             line-height: 5px;
         }
-
+        
         div {
             margin: 3px;
         }
-
+        
+        h1 {
+            text-align: center;
+        }
+        
         h2 {
             text-align: center;
         }
-
-        h3 {
-            text-align: center;
-        }
-
+        
         div#style1 {
             font-family: Helvetica;
             color: darkgreen;
         }
-
+        
         table {
             border: 1px solid green;
             margin-right: auto;
             margin-left: auto;
-            width: 40%;
+            width: 50%;
+        }
+        
+        h6 {
+            text-align: center;
+            color: green;
+        }
+        
+        p#smiley {
+            text-align: center;
+        }
+        
+        p#thanks {
+            text-align: center;
+            color: green;
+            font-size: small;
         }
     </style>
+    <script type="text/javascript">
+        function display() {
+            let myForm = document.getElementById("form1");
+            let fName = myForm.fname.value;
+            let lName = myForm.lname.value;
+            let t = myForm.topic;
+            let c = myForm.comments.value;
+
+            if (fName == "") {
+                alert("Please enter your first name!")
+            } else if (lName == "") {
+                alert("Please enter your last name!")
+            }
+            let topics = "";
+            console.log(topics)
+            for (let i = 0; i < t.length; i++) {
+                // console.log(t[i])
+                if (t[i].checked) {
+                    console.log(t[i].value)
+                    topics += t[i].value;
+                }
+                // alert("Please click a topic!")
+            }
+            if (topics == "") {
+                alert("Please click a topic!")
+            }
+            return false;
+        }
+
+        $(document).ready(function() {
+            $("#smiley").hide();
+            $("#thanks").hide();
+            $("#click").click(function() {
+                $("#smiley").show();
+                $("#thanks").show();
+            })
+        })
+    </script>
 </head>
 
 <body>
@@ -81,28 +138,27 @@
                 <a href="Music.htm">MUSIC</a>
                 <a href="Site-Map.htm">SITE MAP</a>
                 <a href="Contact.htm">CONTACT</a>
+                <a href="Credits.htm">CREDITS</a>
             </li>
         </ul>
     </header>
     <div id="style1">
-        <h2>
+        <h1>
             Thanks for visting All About Iran!
-        </h2>
-        <h3>
+        </h1>
+        <h2>
             Please comment any feedback you may have below.
-        </h3>
+        </h2>
         <table>
-            <form action="mailto:nfarkhan2@babson.edu" method="POST">
+            <form id="form1" action="mailto:nfarkhan2@babson.edu" method="POST">
                 <tr>
                     <td>
                         First Name:
-                        <input type="text" name="fname" maxlength="100" size="25"
-                            placeholder="Please enter your first name">
+                        <input type="text" name="fname" maxlength="100" size="25" placeholder="Please enter your first name">
                     </td>
                     <td>
                         Last Name:
-                        <input type="text" name="lname" maxlength="100" size="25"
-                            placeholder="Please enter your last name">
+                        <input type="text" name="lname" maxlength="100" size="25" placeholder="Please enter your last name">
                     </td>
                 </tr>
                 <tr>
@@ -113,22 +169,34 @@
                         <input type="checkbox" name="topic" value="history"> History <br>
                         <input type="checkbox" name="topic" value="geography"> Geography <br>
                         <input type="checkbox" name="topic" value="culture"> Culture <br>
-                        <input type="checkbox" name="topix" value="food"> Food<br>
+                        <input type="checkbox" name="topic" value="food"> Food<br>
+                        <input type="checkbox" name="topic" value="music"> Music
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <h5>
-                            Please comment any other feedback you may have.
+                            Please comment any other feedback you may have. If not, just type N/A!
                         </h5>
                         <textarea name="comments" rows="6" cols="40"></textarea><br>
 
-                        <button type="submit" name="done" value="done">Done</button>
+                        <button onclick=" return display()" type="submit" name="done" value="done">Done</button>
                         <button type="reset" name="reset" value="reset">Reset</button>
                     </td>
                 </tr>
             </form>
         </table>
+    </div>
+    <div>
+        <h6 id="click">
+            Click on me for a surprise!
+        </h6>
+        <p id="thanks">
+            Thank you for visiting my website!!
+        </p>
+        <p id="smiley">
+            <img src="smiley.gif">
+        </p>
     </div>
 </body>
 

@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Food">
+    <meta name="keywords" content="Persian Food, Fesenjan, Ghormeh Sabzi, Tadig, Persian Kabob, Bastani, Ice Crea, Persian Ice Cream, Baghali Polo, Zulbia Bahmieh, Dinner, Dishes, Desert">
+    <meta name="author" content="Niiki Farkhan">
     <title>Food</title>
     <style type="text/css">
         body {
             background-color: whitesmoke;
         }
-
+        
         ul {
             list-style-type: none;
             margin: 10px;
@@ -19,11 +22,11 @@
             background-color: green;
             display: inline-block;
         }
-
+        
         li {
             float: left;
         }
-
+        
         li a {
             color: white;
             text-align: center;
@@ -32,20 +35,55 @@
             font-family: Helvetica;
             font-weight: bold;
         }
-
+        
         li a:hover {
             background-color: red;
         }
-
+        
         header {
             text-align: center;
             background-color: green;
             line-height: 5px;
         }
+        
+        div#center {
+            text-align: center;
+        }
+        
+        img {
+            border-width: 10px;
+            border: green 5px solid;
+        }
+        
+        h1 {
+            color: darkgreen;
+            text-align: center;
+        }
+        
+        h2 {
+            color: green;
+        }
     </style>
+    <script type="text/javascript">
+        let i = 0;
+        const slides = ["ghormeh-sabzi.jpg", "fesenjan.jpg", "tadig.jpg", "kabob.jpg", "Baghali-Polo.jpg", "bastani.jpg", "zulbiabamieh.jpg"];
+        const descriptionList = ["Ghormeh Sabzi", "Fesenjan", "Tadig", "Persian Kabob", "Baghali Polo", "Bastani: Persian Ice Cream", "Zulbia Bahmieh: Persian Doughnuts"]
+
+        function slideShow() {
+            let foodImg = document.getElementById("foodImage");
+
+            if (i == slides.length) {
+                i = 0;
+            }
+            foodImg.src = slides[i];
+            document.getElementById("description").innerHTML = descriptionList[i];
+            i = i + 1;
+            setTimeout("slideShow()", 2000);
+        }
+    </script>
 </head>
 
-<body>
+<body onload="slideShow()">
     <header>
         <ul>
             <li>
@@ -57,9 +95,23 @@
                 <a href="Music.htm">MUSIC</a>
                 <a href="Site-Map.htm">SITE MAP</a>
                 <a href="Contact.htm">CONTACT</a>
+                <a href="Credits.htm">CREDITS</a>
             </li>
         </ul>
     </header>
+    <div id="center">
+        <h1>
+            Slide Show of some Persian Dishes
+        </h1>
+        <div>
+            <p id="pic">
+                <img id="foodImage" src="ghormeh-sabzi.jpg" alt="Slide Show of Iran's Food" title="food" />
+            </p>
+            <h2>
+                <p id="description"></p>
+            </h2>
+        </div>
+    </div>
 </body>
 
-</html>
+</html>s

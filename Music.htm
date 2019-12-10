@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Music">
+    <meta name="keywords" content="Music, Playslits, Old Iranian Music, New Iranian Music, Googoosh, Parandeh, Lyrics, Picture">
+    <meta name="author" content="Niiki Farkhan">
     <title>Music</title>
+    <script crossorigin="anonymous" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <style type="text/css">
         body {
             background-color: whitesmoke;
         }
-
+        
         ul {
             list-style-type: none;
             margin: 10px;
@@ -18,13 +22,12 @@
             overflow: hidden;
             background-color: green;
             display: inline-block;
-
         }
-
+        
         li {
             float: left;
         }
-
+        
         li a {
             color: white;
             text-align: center;
@@ -33,35 +36,136 @@
             font-family: Helvetica;
             font-weight: bold;
         }
-
+        
         li a:hover {
             background-color: red;
         }
-
+        
         header {
             text-align: center;
             background-color: green;
             line-height: 5px;
         }
-
+        
         div {
             color: darkgreen;
             text-align: center;
         }
-
+        
         div.left {
-            float:left;
+            float: left;
             padding-left: 400px;
         }
-
+        
         div.right {
             float: right;
             padding-right: 400px;
         }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        h2#msg {
+            color: green;
+            font-family: Arial;
+            width: auto;
+        }
+        
+        div#text {
+            margin-top: 500px;
+            height: 50px;
+            margin-left: 300px;
+            margin-right: 300px;
+        }
+        
+        img#googoosh {
+            height: 300px;
+        }
     </style>
+
+    <script type="text/javascript">
+        let p = 320;
+        let n = 0;
+        const msgList = [
+            "You were that bird",
+            "who rended the cloud's clothes",
+            "he went and got lost in pride",
+            "he went and separated from everyone",
+            "who painted nostalgia on love",
+            "he didn't see (he ignored) his broken-feathered partner",
+            "I 'm that bird",
+            "(who is) mute and tired",
+            "each of my pure feathers",
+            "is on a stone",
+            "each feather that was your clothing",
+            "is now beautiful clothing",
+            "for the earth",
+            "in the last breath",
+            "you are on my mind, o my companion in flight",
+            "only you can",
+            "give me my breath",
+            "come on, my companion",
+            "o my intimate",
+            "take away me from here",
+            "o my old pair",
+            "I 'm that bird",
+            "(who is) mute and tired",
+            "each of my pure feathers",
+            "is on a stone",
+            "each feather that was your clothing",
+            "is now beautiful clothing",
+            "for the earth",
+            "i 'm still thirsty for light",
+            "thirsty",
+            "for the sun 's field",
+            "come quickly, because exile 's wind",
+            "picked all my feathers",
+            "come on, my companion",
+            "only you are intimate",
+            "take away me from here",
+            "o my old pair",
+            "I 'm that bird",
+            "(who is) mute and tired",
+            "each of my pure feathers",
+            "is on a stone",
+            "each feather that was your clothing",
+            "is now beautiful clothing",
+            "for the earth"
+        ];
+
+        function doScroll() {
+            let x = document.getElementById("msg");
+            x.innerHTML = msgList[n];
+            x.style.left = p + "px";
+            if (p > 700) {
+                p = 320;
+                n++;
+                if (n == msgList.length) {
+                    n = 0;
+                }
+            } else {
+                p = p + 1;
+            }
+            console.log(n)
+            setTimeout("doScroll()", 8);
+        }
+
+        function shrink() {
+            let i = document.getElementById("googoosh").width;
+            i = i / 1.25;
+            document.getElementById("googoosh").width = i;
+        }
+
+        function enlarge() {
+            let i = document.getElementById("googoosh").width;
+            i = i * 1.25;
+            document.getElementById("googoosh").width = i;
+        }
+    </script>
 </head>
 
-<body>
+<body onload="doScroll()">
     <header>
         <ul>
             <li>
@@ -73,6 +177,7 @@
                 <a href="Music.htm">MUSIC</a>
                 <a href="Site-Map.htm">SITE MAP</a>
                 <a href="Contact.htm">CONTACT</a>
+                <a href="Credits.htm">CREDITS</a>
             </li>
         </ul>
     </header>
@@ -80,15 +185,24 @@
         <h2>
             Listen some Old Iranian Classics!
         </h2>
-        <iframe src="https://open.spotify.com/embed/playlist/0hmS0i3Vs6d616ccz1syYb" width="300" height="380"
-            frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe src="https://open.spotify.com/embed/playlist/0hmS0i3Vs6d616ccz1syYb" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
     <div class="right">
         <h2>
             Listen to some New Iranian Music!
         </h2>
-        <iframe src="https://open.spotify.com/embed/playlist/56dHIvzp023FBak37aHy5X" width="300" height="380"
-            frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe src="https://open.spotify.com/embed/playlist/56dHIvzp023FBak37aHy5X" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+    <br>
+    <div id="text">
+        <h1>"Parandeh" by Googoosh</h1>
+        <div>
+            <h2 id="msg">This text will move</h2>
+        </div>
+        <br>
+        <div onmouseover="enlarge()" onmouseout="shrink()">
+            <img class="click" src="googoosh.jpg" alt="googoosh" title="googoosh" id="googoosh">
+        </div>
     </div>
 </body>
 

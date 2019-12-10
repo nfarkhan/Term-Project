@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Geography">
+    <meta name="keywords" content="HTML,CSS, JavaScript, jQuery">
+    <meta name="author" content="Niiki Farkhan">
     <title>Geography</title>
     <style type="text/css">
         body {
             background-color: whitesmoke;
         }
-
+        
         ul {
             list-style-type: none;
             margin: 10px;
@@ -19,11 +22,11 @@
             background-color: green;
             display: inline-block;
         }
-
+        
         li {
             float: left;
         }
-
+        
         li a {
             color: white;
             text-align: center;
@@ -32,33 +35,48 @@
             font-family: Helvetica;
             font-weight: bold;
         }
-
+        
         li a:hover {
             background-color: red;
         }
-
+        
         header {
             text-align: center;
             background-color: green;
             line-height: 5px;
         }
-
+        
         h2 {
-            color: darkgreen;
+            color: green;
         }
-
+        
         p.left {
             float: left;
             padding-left: 50px;
-            padding-right: 20px;;
+            padding-right: 20px;
+            ;
         }
-
+        
         p.right {
             float: right;
             padding-right: 50px;
             padding-left: 0px;
         }
+        
+        h1 {
+            color: darkgreen;
+            text-align: center;
+        }
     </style>
+    <script type="text/javascript">
+        function click() {
+            let selected;
+            selected = $
+
+
+            return false;
+        }
+    </script>
 </head>
 
 <body>
@@ -73,9 +91,13 @@
                 <a href="Music.htm">MUSIC</a>
                 <a href="Site-Map.htm">SITE MAP</a>
                 <a href="Contact.htm">CONTACT</a>
+                <a href="Credits.htm">CREDITS</a>
             </li>
         </ul>
     </header>
+    <h1>
+        Iran's Geography
+    </h1>
     <div>
         <p class="left">
             <map name="iran">
@@ -84,15 +106,13 @@
                 <area shape="rect" coords="290, 385, 425, 306" href="https://en.wikipedia.org/wiki/Isfahan"
                     alt="Esfahan" title="Esfahan">
             </map>
-            <img src="iranmap.png" usemap="#iran" alt="Map of Iran" title="Map of Iran">
+            <img src="iranmap.png" usemap="#iran" alt="Map of Iran" title="Map of Iran" id="map">
         </p>
         <p class="right">
             <h2>
                 Here's an indepth video explaing Iran's geography.
             </h2>
-            <iframe width="700" height="400" src="https://www.youtube.com/embed/2xQM4Zy5zIk" frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+            <iframe width="700" height="400" src="https://www.youtube.com/embed/2xQM4Zy5zIk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </p>
     </div>
 </body>
